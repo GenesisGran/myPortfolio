@@ -1,0 +1,16 @@
+Tambahin contact form di footer. Ambil dari Form Validation Folder x
+Bikin kotak buat project masing masing, terus tambahin button "see more". x
+Masuking foto mpi ke webnya. x
+Bikin button "My Projects" jadi bagus. x
+Bikin animasi buat tiap section x
+    Header
+    Home
+    About
+    Skills
+    Projects
+    Contact
+
+Pikirin about sama skillsnya. Coba cari source outline yang dibuat. x
+Pikirin deskripsi buat tiap project.
+Ubah fontnya, cari yang bagus x
+Buat jadi responsive

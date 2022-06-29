@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+/* Pas milih selectornya spesifik banget kalo bisa */
+body {
+  min-width: 342px;
+  margin: 0;
+  background: linear-gradient(lightblue, lightcyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  transition: 150ms ease-out;
+}
+a:hover {
+  font-weight: bold;
+}
+.frontendMentor {
+  color: rgb(0, 157, 255);
+}
+button {
+  cursor: pointer;
+  transition: 150ms ease-out;
+}
+button:hover {
+  font-weight: bold;
+}
+
+header,
+#home,
+#about {
+  animation-duration: 1s;
+  animation-name: slidedown;
+  transition: 200ms ease-out;
+}
+#projects,
+footer {
+  animation-duration: 1s;
+  animation-name: slideup;
+  transition: 200ms ease-out;
+}
+@keyframes slidedown {
+  from {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideup {
+  from {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+header {
+  z-index: 999;
+  background-color: cadetblue;
+  width: 100%;
+  height: 15%;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0;
+}
+header ul {
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+  border-radius: 10px;
+}
+header li {
+  padding: 1rem;
+  border: solid 3px black;
+  border-right: 0;
+}
+header li:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-left: solid 3px black;
+}
+header li:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-right: solid 3px black;
+}
+header .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 247, 255);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+header .left p {
+  margin: 0;
+  text-align: center;
+}
+
+#home,
+#about,
+#projects,
+#contact {
+  scroll-margin-top: 120px;
+}
+#home {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  background-color: yellow;
+  border: solid 5px black;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  box-shadow: 0px 0px 2px 5px rgb(175, 175, 175);
+}
+.name,
+#home p {
+  margin: 0;
+}
+#home p {
+  margin-bottom: 2rem;
+}
+#home .left {
+  width: 50%;
+}
+#home .left a {
+  background-color: aqua;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0px 0px 2px 2px rgb(175, 175, 175);
+}
+#home .left a:hover {
+  box-shadow: 0px 0px 2px 5px gray;
+}
+#home > .right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+#home > .right > .socialMedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.socialMedia a {
+  width: 70px;
+  height: 70px;
+}
+.socialMedia a:first-child img {
+  transform: translateX(5px);
+}
+.socialMedia img {
+  width: 100%;
+}
+.socialMedia a:hover {
+  transform: scale(1.2);
+}
+#home > .right > img {
+  width: 50%;
+  border: solid 5px black;
+  border-radius: 50%;
+}
+
+#about,
+#projects,
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#about {
+  background-color: aliceblue;
+  flex-direction: row;
+  align-items: flex-start;
+}
+#about ul {
+  text-align: left;
+}
+.about {
+  width: 70%;
+  background-color: antiquewhite;
+}
+.skills {
+  width: 30%;
+}
+
+#projects {
+  background-color: aquamarine;
+  padding-bottom: 1rem;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#moreProjects {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: 150ms ease-out;
+}
+
+.projects > *:not(#moreProjects, #showMoreBtn),
+#moreProjects > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 10%;
+  background-color: aqua;
+  border: solid 1px black;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0px 0px 2px 2px rgb(175, 175, 175);
+}
+#showMoreBtn {
+  background-color: gray;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  width: 10%;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.projects > *:not(#moreProjects):hover,
+#moreProjects > *:hover {
+  box-shadow: 0px 0px 2px 5px gray;
+}
+figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.github {
+  width: 36px;
+  height: 36px;
+}
+figure img {
+  width: 100%;
+}
+.github:hover {
+  transform: scale(1.2);
+}
+.github img {
+  margin-left: 0.5rem;
+  width: 100%;
+}
+figcaption .frontendMentor {
+  margin-left: 0.2rem;
+}
+
+footer {
+  text-align: left;
+  padding-bottom: 2rem;
+}
+footer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+}
+footer form > * {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 0;
+  outline: none;
+}
+footer form button {
+  border-radius: 50px;
+  background-color: blueviolet;
+  color: white;
+}
+
+@media all and (max-width: 1366px) {
+  .projects > *:not(#moreProjects, #showMoreBtn),
+  #moreProjects > * {
+    width: 45%;
+  }
+  #showMoreBtn {
+    width: auto;
+  }
+}
+@media all and (max-width: 880px) {
+  .projects > *:not(#moreProjects, #showMoreBtn),
+  #moreProjects > * {
+    width: 90%;
+  }
+  .projects {
+    font-size: 0.9rem;
+  }
+  header {
+    padding: 0 0.5rem;
+    font-size: 1rem;
+  }
+  header .left {
+    padding: 0.2rem;
+  }
+  header li {
+    padding: 0.5rem;
+  }
+  #home {
+    font-size: 1rem;
+  }
+  #home p {
+    margin-bottom: 1rem;
+  }
+  #home .left a {
+    padding: 0.5rem;
+  }
+  .socialMedia {
+    transform: translateX(10px);
+  }
+  .socialMedia a {
+    width: 40px;
+    height: 40px;
+  }
+  .socialMedia a:first-child img {
+    transform: translateX(2px);
+  }
+  #about {
+    flex-direction: column;
+  }
+  .about,
+  .skills {
+    width: 100%;
+  }
+}
