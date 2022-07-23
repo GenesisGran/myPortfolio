@@ -6,7 +6,10 @@
   box-sizing: border-box;
   font-family: "Kanit", sans-serif;
 }
-/* Pas milih selectornya spesifik banget kalo bisa */
+/* Choose specific selector */
+html {
+  scroll-behavior: smooth; /*so that when click on nav there is a scroll animation*/
+}
 body {
   min-width: 342px;
   margin: 0;
@@ -311,6 +314,17 @@ footer form button {
   border-radius: 50px;
   background-color: blueviolet;
   color: white;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(120px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 @media all and (max-width: 1366px) {
